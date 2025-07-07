@@ -1,0 +1,23 @@
+<div class="container">
+    <button class="btn btn-outline-primary me-3" type="button" (click)="testGetAuthError()">Test Auth Error</button>
+    <button class="btn btn-outline-primary me-3" type="button" (click)="testNotFoundError()">Test Not Found
+        Error</button>
+    <button class="btn btn-outline-primary me-3" type="button" (click)="testServerError()">Test Server Error</button>
+    <button class="btn btn-outline-primary me-3" type="button" (click)="testBadRequestError()">Test Bad Request
+        Error</button>
+    <button class="btn btn-outline-primary me-3" type="button" (click)="testValidationError()">Test Validation
+        Error</button>
+
+    @if(errorMessages.length > 0)
+    {
+    <div class="row mt-2">
+        <ol class="text-danger">
+            @for (error of errorMessages; track $index) {
+                <li>{{error}}</li>
+            }
+        </ol>
+    </div>
+    }
+</div>
+
+<button class="btn btn-primary mt-3" type="button" routerLink="/">Back to Home</button>
