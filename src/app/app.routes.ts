@@ -21,7 +21,6 @@ export const routes: Routes = [
             { path: 'member/edit', component: MemberEditComponent},
             { path: 'lists', component: ListsComponent },
             { path: 'messages', component: MessagesComponent },
-            
 
         ]
     },
